@@ -1,0 +1,26 @@
+{{ $page := .Site.GetPage "articles" }} 
+{{ $pages := last 4 $page.Pages }} 
+
+<section>
+  <div>
+    <div>
+      <h2>Recent articles</h2>
+      <a href="">View all articles</a>
+    </div>
+    <div>
+      {{ range sort $pages "Date" "asc" }}
+        <div>
+          <div>
+            <div>
+            <h4>{{ .Title }}</h4>
+            <p>{{ .Date | time.Format "Monday, Jan 2, 2006" }}</p>
+            </div>
+            <a href=""><img src="icons/arrow-right.svg" alt=""></a>
+          </div>
+          <span>&nbsp;</span>
+        </div>
+
+      {{ end }}
+    </div>
+  </div>
+</section>
