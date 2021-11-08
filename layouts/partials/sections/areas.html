@@ -1,0 +1,19 @@
+{{ $page := .Site.GetPage "areas" }} 
+{{ $pages := $page.Pages }} 
+<section>
+  <div>
+    <div>
+      <h3>{{ $page.Title }}</h3>
+      <p>{{ $page.Params.Description }}</p>
+    </div>
+    <div>
+      {{ range $pages }}
+      <div>
+        <img height="115" width="115" src="{{ .Params.Icon }}" alt="{{ .Params.Title }}">
+        <h4>{{.Params.Title }}</h4>
+        <a href=""><img height="20" width="20" src="icons/arrow-down.svg" alt="arrow down"></a>
+      </div>
+      {{ end }}
+    </div>
+  </div>
+</section>
