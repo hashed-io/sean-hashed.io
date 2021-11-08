@@ -1,0 +1,21 @@
+{{ $page := .Site.GetPage "work" }} 
+{{ $pages := $page.Pages }} 
+<section>
+  <div>
+    <div>
+      <h3>{{ $page.Title }}</h3>
+      <button></button>
+      <button></button>
+    </div>
+    <div>
+      {{ range $pages }}
+        <h4>{{ .Title }}</h4>
+        <p>Category/{{ .Params.Category }}</p>
+        <p>{{ .Params.Description }}</p>
+        <a href="">Read case study</a>
+      {{ end }}
+    </div>
+
+  </div>
+  
+</section>
