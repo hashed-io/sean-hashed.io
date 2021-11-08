@@ -1,2 +1,27 @@
 <footer>
+  <div>
+    <div>
+    </div>
+    <div>
+      <div>
+        <ul>
+          {{ range .Site.Menus.social -}}
+            <li>
+              <a href="{{ .URL | absURL }}">{{ .Pre | safeHTML }}</a>
+            </li>
+          {{ end -}}
+        </ul>
+      </div>
+      <div>
+        <ul>
+          {{ range .Site.Menus.footer }}
+            <li>
+              <a href="{{ .URL | absURL }}">{{ .Pre | safeHTML }}<span>{{ .Name | safeHTML }}</span></a>
+            </li>
+          {{ end -}}
+        </ul>
+      </div>
+    </div>
+    
+  </div>
 </footer>

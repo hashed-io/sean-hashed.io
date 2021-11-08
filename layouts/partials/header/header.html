@@ -1,2 +1,11 @@
 <header>
+  <div>
+    <ul>
+      {{ range .Site.Menus.main }}
+        <li>
+          <a href="{{ .URL | absURL }}"><span>{{ .Name | safeHTML }}</span></a>
+        </li>
+      {{ end -}}
+    </ul>
+  </div>
 </header>
