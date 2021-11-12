@@ -1,0 +1,16 @@
+.logo {
+  position: relative;
+  width: 15rem;
+  height: 10rem;
+  display: flex;
+  align-items: center;
+
+  .symbol {
+    width: 30%;
+  }
+
+  .name {
+    position: absolute;
+    left: -5%;
+  }
+}
