@@ -5,7 +5,17 @@ $white: #ffffff;
 $gray-600: #b1b1b1;
 $gray-700: #707070;
 
-
-
 $body-bd: $secondary;
 $body-color: $white;
+
+$font-family-objectivity: "Objectivity", Helvetica, sans-serif;
+$font-family: "Manuka", Helvetica, sans-serif;
+$font-weight-light: 300;
+$font-weight-regular: 400;
+$font-weight-heavy: 700;
+$font-height: 1.5;
+
+$breakpoint-small: 33.75em; // 540px
+$breakpoint-med: 45em; // 720px
+$breakpoint-large: 60em; // 960px
+$breakpoint-big: 77.5em; // 1240px
