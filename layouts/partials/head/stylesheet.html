@@ -1,3 +1,6 @@
+{{ $css := resources.Get "css/normalize.css" }}
+{{ $style := $css | resources.Minify }}
+<link rel="stylesheet" href="{{ $style.Permalink }}" crossorigin="anonymous">
 {{ if eq (hugo.Environment) "development" -}}
   {{ $options := (dict "targetPath" "app.css" "enableSourceMap" true) }}
   {{ $sass := resources.Get "sass/app.scss" }}
