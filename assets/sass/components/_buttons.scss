@@ -1,0 +1,31 @@
+.btn {
+  background-color: $white;
+  color: $black;
+  padding: 1.1rem 3rem;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 10rem;
+  border: none;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 1.15rem;
+
+  &:hover {
+    background-color: $primary;
+  }
+
+  &-circle {
+    height: 4rem;
+    width: 4rem;
+    padding: 0;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+  }
+  
+  &-secondary {
+    background-color: $secondary;
+    color: $white;
+  }
+}
