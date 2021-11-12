@@ -1,0 +1,52 @@
+.articles {
+  display: flex;
+  flex-direction: column;
+  margin-top: 2rem;
+
+  @media only screen and (min-width: $breakpoint-med) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  &-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    @media only screen and (min-width: $breakpoint-med) {
+      width: 40%;
+    }
+  }
+
+  &-list {
+    margin-top: 2rem;
+    @media only screen and (min-width: $breakpoint-med) {
+      width: 60%;
+      flex-direction: row;
+      justify-content: space-between;
+      margin-top: 0;
+    }
+
+  }
+
+  .article {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &-title {
+      width: 95%;
+    }
+
+    &:hover h4 {
+      color: $primary;
+    }
+
+    &:hover > .btn {
+      background-color: $primary;
+    }
+    
+  }
+  
+}

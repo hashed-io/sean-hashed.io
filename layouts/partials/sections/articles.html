@@ -1,25 +1,24 @@
 {{ $page := .Site.GetPage "articles" }} 
 {{ $pages := last 4 $page.Pages }} 
 
-<section>
-  <div>
-    <div>
-      <h2>Recent articles</h2>
-      <a href="">View all articles</a>
+<section class="container">
+  <div class="articles">
+    <div class="articles-info">
+      <h2 class="text-primary">Recent articles</h2>
+      <a class="btn" href="{{ $page.Permalink }}">View all articles</a>
     </div>
-    <div>
+    <div class="articles-list">
       {{ range sort $pages "Date" "asc" }}
         <div>
-          <div>
-            <div>
-            <h4>{{ .Title }}</h4>
-            <p>{{ .Date | time.Format "Monday, Jan 2, 2006" }}</p>
+          <div class="article">
+            <div class="article-title">
+              <h3 class="h4">{{ .Title }}</h3>
+              <p>{{ .Date | time.Format "Jan 2, 2006" }}</p>
             </div>
-            <a href=""><img src="icons/arrow-right.svg" alt=""></a>
+            <a class="btn btn-circle" href="{{ .Permalink }}"><img width="24" height="24" src="icons/arrow-right.svg" alt=""><span class="sr-only">Arrow down</span></a>
           </div>
-          <span>&nbsp;</span>
+          <span class="divider">&nbsp;</span>
         </div>
-
       {{ end }}
     </div>
   </div>
