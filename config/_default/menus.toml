@@ -1,21 +1,21 @@
 [[main]]
   name = "Projects"
-  url = "#"
+  url = "/projects"
   weight = 1
 
 [[main]]
   name = "Team"
-  url = "#"
+  url = "/"
   weight = 2
 
 [[main]]
   name = "Articles"
-  url = "#"
+  url = "/articles"
   weight = 3
 
 [[main]]
   name = "Contact" 
-  url = "#"
+  url = "/#form"
   weight = 4
 
 [[social]]
