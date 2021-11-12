@@ -1,27 +1,24 @@
-<footer>
-  <div>
-    <div>
-    </div>
-    <div>
-      <div>
-        <ul>
+<footer class="container">
+  <div class="footer" >
+    <a class="logo" href="{{ .Site.BaseURL }}">
+      <img height="50" width="50" class="symbol" src="/logo/Hashed_Symbol_Gradient.png" alt="Hashed Logo">
+      <img height="60" width="150" class="name" src="/logo/Hashed_Logo_GradientWhite.svg" alt="Hashed Logo">
+    </a>
+    <div class="footer-links">
+        <ul class="footer-links-social">
           {{ range .Site.Menus.social -}}
             <li>
-              <a href="{{ .URL | absURL }}">{{ .Pre | safeHTML }}</a>
+              <a href="{{ .URL | absURL }}">{{ .Pre | safeHTML }}<span class="sr-only">{{ .Name | safeHTML }}</span></a>
             </li>
           {{ end -}}
         </ul>
-      </div>
-      <div>
-        <ul>
+        <ul class="footer-links-information">
           {{ range .Site.Menus.footer }}
             <li>
               <a href="{{ .URL | absURL }}">{{ .Pre | safeHTML }}<span>{{ .Name | safeHTML }}</span></a>
             </li>
           {{ end -}}
         </ul>
-      </div>
     </div>
-    
   </div>
 </footer>
