@@ -1,9 +1,13 @@
-<header>
-  <div>
-    <ul>
+<header class="container">
+  <div class="header">
+    <a class="logo" href="{{ .Site.BaseURL }}">
+      <img height="50" width="50" class="symbol" src="/logo/Hashed_Symbol_Gradient.png" alt="Hashed Logo">
+      <img height="60" width="150" class="name" src="/logo/Hashed_Logo_GradientWhite.svg" alt="Hashed Logo">
+    </a>
+    <ul class="header-links">
       {{ range .Site.Menus.main }}
         <li>
-          <a href="{{ .URL | absURL }}"><span>{{ .Name | safeHTML }}</span></a>
+          <a href="{{ .URL }}"><span>{{ .Name | safeHTML }}</span></a>
         </li>
       {{ end -}}
     </ul>
