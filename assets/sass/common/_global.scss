@@ -1,3 +1,15 @@
+html {
+  font-size: 50%;
+
+  @media only screen and (min-width: $breakpoint-large) {
+    font-size: 60%;
+  }
+
+  @media only screen and (min-width: $breakpoint-big) {
+    font-size: 70%;
+  }
+}
+
 body {
   background-color: $body-bd;
   color: $body-color;
