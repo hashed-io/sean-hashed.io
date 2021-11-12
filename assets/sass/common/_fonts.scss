@@ -1,0 +1,39 @@
+@font-face {
+  font-family: "Objectivity";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src:
+    local("Objectivity"),
+    url("../fonts/objectivity/Objectivity-Regular.woff2") format("woff2"),
+}
+
+@font-face {
+  font-family: "Objectivity";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src:
+    local("Objectivity"),
+    url("../fonts/objectivity/Objectivity-Medium.woff2") format("woff2"),
+}
+
+@font-face {
+  font-family: "Objectivity";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src:
+    local("Objectivity"),
+    url("../fonts/objectivity/Objectivity-Bold.woff2") format("woff2"),
+}
+
+@font-face {
+  font-family: "Manuka";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src:
+    local("Manuka"),
+    url("../fonts/manuka/manuka-regular.woff2") format("woff2"),
+}
