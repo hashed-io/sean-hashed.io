@@ -1,0 +1,32 @@
+.card {
+  background-color: $white;  
+  color: $secondary;
+  border-radius: 5px;
+  padding: 3rem 2.3rem;
+  margin-left: 3rem;
+  min-width: 28.4rem;
+  max-width: 28.4rem;
+  min-height: 40rem;
+
+  &:first-child {
+    margin-left: 0;
+  }
+
+  &-title {
+    line-height: 1.15;
+  }
+
+  &-image {
+    height: 8rem;
+    object-fit: contain;
+  }
+
+  &-body {
+    height: 11.3rem;
+    font-size: 1.4rem;
+  }
+
+  & .category {
+    color: #B1B1B1;
+  }
+}
