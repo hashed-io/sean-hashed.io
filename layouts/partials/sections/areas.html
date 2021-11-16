@@ -1,17 +1,17 @@
 {{ $page := .Site.GetPage "areas" }} 
 {{ $pages := $page.Pages }} 
-<section>
-  <div>
-    <div>
-      <h3>{{ $page.Title }}</h3>
+<section class="container">
+  <div class="areas">
+    <div class="areas-info">
+      <h2 class="text-primary areas-title">{{ $page.Title }}</h2>
       <p>{{ $page.Params.Description }}</p>
     </div>
-    <div>
+    <div class="areas-list">
       {{ range $pages }}
-      <div>
-        <img height="115" width="115" src="{{ .Params.Icon }}" alt="{{ .Params.Title }}">
-        <h4>{{.Params.Title }}</h4>
-        <a href=""><img height="20" width="20" src="icons/arrow-down.svg" alt="arrow down"></a>
+      <div class="areas-item">
+        <img height="124" width="144" src="{{ .Params.Icon }}" alt="{{ .Params.Title }}">
+        <h3 class="h5 bold font-secondary area-title">{{.Params.Title }}</h3>
+        <a class="btn btn-circle-sm" href="{{ .Permalink }}"><img class="invert-color" height="19" width="11" src="icons/arrow.svg" alt="arrow down"><span class="sr-only">Arrow down</span></a>
       </div>
       {{ end }}
     </div>
