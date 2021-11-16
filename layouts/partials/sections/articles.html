@@ -1,7 +1,7 @@
 {{ $page := .Site.GetPage "articles" }} 
 {{ $pages := last 4 $page.Pages }} 
 
-<section class="container">
+<section class="container mt-xl">
   <div class="articles">
     <div class="articles-info">
       <h2 class="text-primary">Recent articles</h2>
@@ -12,10 +12,10 @@
         <div>
           <div class="article">
             <div class="article-title">
-              <h3 class="h4">{{ .Title }}</h3>
+              <h3>{{ .Title }}</h3>
               <p>{{ .Date | time.Format "Jan 2, 2006" }}</p>
             </div>
-            <a class="btn btn-circle" href="{{ .Permalink }}"><img width="24" height="24" src="icons/arrow-right.svg" alt=""><span class="sr-only">Arrow down</span></a>
+            <a class="btn btn-circle arrow-right" href="{{ .Permalink }}"><img class="invert-color" width="24" height="24" src="icons/arrow.svg" alt=""><span class="sr-only">Arrow down</span></a>
           </div>
           <span class="divider">&nbsp;</span>
         </div>

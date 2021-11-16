@@ -1,7 +1,6 @@
 .articles {
   display: flex;
   flex-direction: column;
-  margin-top: 2rem;
 
   @media only screen and (min-width: $breakpoint-med) {
     flex-direction: row;
@@ -22,21 +21,20 @@
   &-list {
     margin-top: 2rem;
     @media only screen and (min-width: $breakpoint-med) {
-      width: 60%;
       flex-direction: row;
       justify-content: space-between;
       margin-top: 0;
     }
-
   }
 
   .article {
     display: flex;
     justify-content: space-between;
     align-items: center;
-
-    &-title {
-      width: 95%;
+    width: 100%;
+    
+    @media only screen and (min-width: $breakpoint-med) {
+      width: 80.3rem;
     }
 
     &:hover h4 {
@@ -46,7 +44,10 @@
     &:hover > .btn {
       background-color: $primary;
     }
-    
+
+    & img {
+      width: 2.4rem;
+      height: 2.4rem;
+    }
   }
-  
 }
