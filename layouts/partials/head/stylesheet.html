@@ -7,7 +7,7 @@
   {{ $style := $sass | resources.ToCSS }}
   <link rel="stylesheet" href="{{ $style.Permalink }}">
 {{ else -}}
-  {{ $options := (dict "targetPath" "app.css" "outputStyle" "compressed" true)}}
+  {{ $options := (dict "targetPath" "app.css" "enableSourceMap" true) }}
   {{ $sass := resources.Get "sass/app.scss" }}
   {{ $style := $sass | resources.ToCSS }}
   {{ $secureCSS := $style | resources.Fingerprint "sha512" -}}
