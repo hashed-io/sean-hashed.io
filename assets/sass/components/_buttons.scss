@@ -8,20 +8,28 @@
   border: none;
   text-transform: uppercase;
   font-weight: 500;
-  font-size: 1.15rem;
+  font-size: 1.4rem;
 
   &:hover {
     background-color: $primary;
   }
 
-  &-circle {
-    height: 4rem;
-    width: 4rem;
+  &-circle, &-circle-sm {
     padding: 0;
     border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center; 
+
+  }
+  &-circle {
+    height: 6.6rem;
+    width: 6.6rem;
+  }
+
+  &-circle-sm {
+    height: 3.4rem;
+    width: 3.4rem;
   }
   
   &-secondary {
