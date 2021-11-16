@@ -1,13 +1,8 @@
 html {
-  font-size: 50%;
-
+  font-size: 30%;
   @media only screen and (min-width: $breakpoint-large) {
-    font-size: 60%;
-  }
-
-  @media only screen and (min-width: $breakpoint-big) {
-    font-size: 70%;
-  }
+    font-size: 62.5%;
+  }  
 }
 
 body {
@@ -19,8 +14,32 @@ body {
 
 .m {
   &t {
+    &-sm {
+      margin-top: 1.2rem !important;
+    }
+    &-md {
+      margin-top: 2.4rem !important;
+    }
     &-lg {
-      margin-top: 4rem;
+      margin-top: 3.6rem !important;
+    }
+    &-xl {
+      margin-top: 6rem !important;
+    }
+  }
+
+  &b {
+    &-sm {
+      margin-bottom: 1.2rem !important;
+    }
+    &-md {
+      margin-bottom: 2.4rem !important;
+    }
+    &-lg {
+      margin-bottom: 3.6rem !important;
+    }
+    &-xl {
+      margin-bottom: 6rem !important;
     }
   }
 }
@@ -38,7 +57,9 @@ body {
 }
 
 a {
-  font-size: 1.5rem;
+  font-size: 1.8rem;
+  letter-spacing: 0;
+  line-height: 1.8rem;
   color: $white;
   text-decoration: none;
 }
@@ -59,4 +80,14 @@ a {
   clip: rect(0, 0, 0, 0);
   white-space: nowrap;
   border: 0;
+}
+
+.arrow { 
+  &-right {
+    transform: rotate(-90deg);
+  }
+  
+  &-left {
+    transform: rotate(90deg);
+  }
 }
