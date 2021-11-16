@@ -1,0 +1,16 @@
+{{ define "main" }}
+<div class="container">
+  <h1 class="text-primary item">
+    {{ .Title }}
+  </h1>
+  <div>
+  {{ range .Paginator.Pages }}
+    <article class="item">
+      <h2><a class="link h4" href="{{ .Permalink }}">{{ .Title }}</a></h2>
+      <p>{{ .Description }}</p>
+    </article>
+  {{ end }}
+  {{ template "_internal/pagination.html" . }}
+  </div>
+</div>
+{{ end }}
