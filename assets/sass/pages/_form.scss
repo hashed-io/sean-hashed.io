@@ -1,0 +1,77 @@
+.form {
+  display: flex;
+  flex-direction: column;
+
+  @media only screen and (min-width: $breakpoint-med) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  &-title {
+    @media only screen and (min-width: $breakpoint-med) {
+      width: 40%;
+    }
+    @media only screen and (min-width: $breakpoint-large) {
+      width: 50%;
+    }
+  }
+}
+
+
+form {
+  width: 100%;
+  @media only screen and (min-width: $breakpoint-med) {
+    flex-direction: row;
+    width: 60%;
+  }
+  @media only screen and (min-width: $breakpoint-large) {
+    flex-direction: row;
+    width: 45%;
+  }
+
+  .btn {
+    width: auto;
+  }
+}
+
+label {
+  color: $white;
+  &:first-child {
+    margin-top: 5rem;
+  }
+  &:not(:first-child) {
+    margin-top: 8rem;
+  }
+}
+
+label, input, textarea {
+  display: block;
+  font-size: 2.2rem;
+}
+
+input {
+  border: 0;
+  border-bottom: 1px solid $white;
+
+  &:hover {
+    outline: none;
+  }
+  
+  &:focus-visible {
+    outline: none;
+  }
+}
+
+input, textarea {
+  color: $white;
+  width: 100%;
+  background-color: transparent;
+}
+
+textarea {
+  border: 1px solid $white;
+  margin-bottom: 6.4rem;
+  margin-top: 2rem;
+  height: 12.5rem;
+  resize: none; 
+}
