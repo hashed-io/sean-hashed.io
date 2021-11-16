@@ -1,0 +1,33 @@
+{{ $page := .Site.GetPage "projects" }} 
+{{ $pages := $page.Pages }} 
+<section class="container">
+  <div>
+    <div class="projects-header">
+      <h2 class="text-primary">{{ $page.Params.Subtitle }}</h2>
+      <div class="projects-actions">
+        <button id="arrow-left" class="btn btn-circle arrow-left">
+          <img class="invert-color" width="24" height="24" src="icons/arrow.svg" alt="arrow-left">
+          <span class="sr-only">Arrow down</span>
+        </button>
+        <button id="arrow-right" class="btn btn-circle arrow-right">
+          <img class="invert-color" width="24" height="24" src="icons/arrow.svg" alt="arrow-right">
+          <span class="sr-only">Arrow down</span>
+        </button>
+      </div>
+    </div>
+    <div class="projects-list" id="projects-list">
+      {{ range $pages }}
+        <div class="card">
+          {{- $image := resources.Get .Params.Image -}}
+          <img height="60" width="auto" class="card-image" src="{{ .Params.Image }}" alt="{{ .Params.Alt }}">
+          <h3 class="text-primary card-title">{{ .Title }}</h3>
+          <p class="mb-lg mt-sm category">Category/{{ .Params.Category }}</p>
+          <p class="card-body mb-lg">{{ .Params.Description }}</p>
+          <a class="btn btn-secondary" href="{{ .Permalink }}">Read case study</a>
+        </div>
+      {{ end }}
+    </div>
+
+  </div>
+  
+</section>
