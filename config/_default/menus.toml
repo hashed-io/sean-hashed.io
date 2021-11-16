@@ -1,6 +1,6 @@
 [[main]]
   name = "Projects"
-  url = "/projects"
+  url = "/"
   weight = 1
 
 [[main]]
@@ -10,7 +10,7 @@
 
 [[main]]
   name = "Articles"
-  url = "/articles"
+  url = "/"
   weight = 3
 
 [[main]]
