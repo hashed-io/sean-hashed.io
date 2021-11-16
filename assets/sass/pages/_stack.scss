@@ -1,0 +1,56 @@
+.stack {
+  &-list {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @media only screen and (min-width: $breakpoint-med) {
+      flex-direction: row;
+    }
+
+    & > img {
+      &:not(:first-child) {
+        @media only screen and (min-width: $breakpoint-med) {
+          margin-left: 12rem;
+        }
+      }
+      margin-top: 1rem;
+      width: 9rem;
+      height: 9rem;
+    }
+  }
+
+  &-title {
+    margin-bottom: 9.6rem;
+  }
+}
+@media only screen and (min-width: $breakpoint-med) {
+  #ethereum {
+    transform: scale(1.5);
+  }
+
+  #wax {
+    margin-left: 20rem;
+  }
+
+  #kusama {
+    transform: scale(2.2);
+  }
+
+  #polkadot {
+    transform: scale(0.85);
+  }
+
+  #telos {
+    transform: scale(1.8);
+  }
+
+  #eos {
+    transform: scale(0.95);
+  }
+
+  #solana {
+    margin-left: 20rem;
+    transform: scale(3.5);
+  }
+}
