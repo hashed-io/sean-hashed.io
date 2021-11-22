@@ -44,16 +44,16 @@
 
 [[footer]]
   name = "Privacy Policy"
-  url = "/privacy-policy/"
+  url = ""
   weight = 10
 
 [[footer]]
   name = "Cookies"
-  url = "/cookies/"
+  url = ""
   weight = 20
 
 [[footer]]
   name = "Copyright 2021 HASHED"
   pre = "<span>&copy;</span>"
-  url = "/cookies/"
+  url = ""
   weight = 30
