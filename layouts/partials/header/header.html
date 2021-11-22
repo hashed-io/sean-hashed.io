@@ -1,8 +1,11 @@
+{{ $base := .Site.BaseURL }}
 <header class="container">
   <div class="header">
-    <a class="logo" href="{{ .Site.BaseURL }}">
-      <img height="50" width="50" class="symbol" src="/logo/Hashed_Symbol_Gradient.png" alt="Hashed Logo">
-      <img height="60" width="150" class="name" src="/logo/Hashed_Logo_GradientWhite.png" alt="Hashed Logo">
+    <a class="logo" href="{{ $base }}">
+      {{ $symbol := printf "%s%s" $base "logo/Hashed_Symbol_Gradient.png"  }}
+      {{ $name := printf "%s%s" $base "logo/Hashed_Logo_GradientWhite.png"  }}
+      <img height="50" width="50" class="symbol" src="{{ $symbol }}" alt="Hashed Logo">
+      <img height="60" width="150" class="name" src="{{ $name }}" alt="Hashed Logo">
     </a>
     <ul class="header-links">
       {{ range .Site.Menus.main }}
