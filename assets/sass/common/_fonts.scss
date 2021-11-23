@@ -1,6 +1,16 @@
 @font-face {
   font-family: "Objectivity";
   font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src:
+    local("Objectivity"),
+    url("../fonts/objectivity/Objectivity-Light.woff2") format("woff2"),
+}
+
+@font-face {
+  font-family: "Objectivity";
+  font-style: normal;
   font-weight: 400;
   font-display: swap;
   src:
