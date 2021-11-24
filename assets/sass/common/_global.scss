@@ -57,12 +57,15 @@ body {
 }
 
 a {
-  font-size: 1.8rem;
-  letter-spacing: 0;
-  line-height: 1.8rem;
+  font-size: 3.5rem;
   color: $white;
   text-decoration: none;
   font-weight: 100;
+  @media only screen and (min-width: $breakpoint-med) {
+    font-size: 1.8rem;
+    letter-spacing: 0;
+    line-height: 1.8rem;
+  }
 }
 
 .link {
