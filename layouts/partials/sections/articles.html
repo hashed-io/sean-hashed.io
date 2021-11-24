@@ -5,7 +5,7 @@
   <div class="articles">
     <div class="articles-info">
       <h2 class="text-primary">Recent articles</h2>
-      <a class="btn" href="{{ $page.Permalink }}">View all articles</a>
+      <a class="btn hiden" href="{{ $page.Permalink }}">View all articles</a>
     </div>
     <div class="articles-list">
       {{ range sort $pages "Date" "asc" }}
@@ -15,7 +15,7 @@
               <h3>{{ .Title }}</h3>
               <p>{{ .Date | time.Format "Jan 2, 2006" }}</p>
             </div>
-            <a class="btn btn-circle arrow-right" href="{{ .Permalink }}"><img class="invert-color" width="24" height="24" src="icons/arrow.svg" alt=""><span class="sr-only">Arrow down</span></a>
+            <a class="btn btn-circle btn-circle-hiden arrow-right" href="{{ .Permalink }}"><img class="invert-color" width="24" height="24" src="icons/arrow.svg" alt=""><span class="sr-only">Arrow down</span></a>
           </div>
           <span class="divider">&nbsp;</span>
         </div>
