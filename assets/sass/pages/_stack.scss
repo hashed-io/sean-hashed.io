@@ -7,6 +7,10 @@
     gap: 10rem 0;
     
     @media only screen and (min-width: $breakpoint-large) {
+      grid-template-columns: repeat(5, 1fr);
+    }
+    
+    @media only screen and (min-width: $breakpoint-big) {
       display: flex;
       align-items: center;
       flex-direction: row;
@@ -18,9 +22,6 @@
 
     & > img {
       &:not(:first-child) { 
-        @media only screen and (min-width: $breakpoint-large) {
-          margin-left: 10rem;
-        }
         @media only screen and (min-width: $breakpoint-big) {
           margin-top: 1rem;
           margin-left: 12rem;
@@ -79,7 +80,7 @@
   }
 
   #wax {
-    margin-left: 20rem;
+    margin-left: 10rem;
   }
 
   #kusama {
@@ -105,6 +106,10 @@
 
 @media only screen and (min-width: $breakpoint-big) {
   #solana {
+    margin-left: 20rem;
+  }
+
+  #wax {
     margin-left: 20rem;
   }
 }

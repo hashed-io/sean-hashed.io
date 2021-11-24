@@ -15,8 +15,11 @@
     grid-template-columns: repeat(2, 1fr);
     @media only screen and (min-width: $breakpoint-med) {
       grid-template-columns: repeat(2, 1fr);
-    } 
+    }
     @media only screen and (min-width: $breakpoint-large) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    @media only screen and (min-width: $breakpoint-big) {
       grid-template-columns: repeat(5, 1fr);
       gap: 16rem 18rem;
     }
