@@ -12,20 +12,55 @@
   }
   
   &-info {
-    
+    padding: 2rem;
     @media only screen and (min-width: $breakpoint-med) {
-      width: 66.3rem;
+      width: 60%;
       padding-left: 6.3rem;
+    }
+    
+    @media only screen and (min-width: $breakpoint-large) {
+      padding-left: 2rem;
+    }
+
+    @media only screen and (min-width: $breakpoint-big) {
+      width: 66.3rem;
       padding-right: 10.1rem;
+      padding-left: 6.3rem;
     }
     
     p {
-      padding: 5rem 0;
+      padding: 2rem 0;
+      @media only screen and (min-width: $breakpoint-big) {
+        padding: 5rem 0;
+      }
     }
   }
 
   &-img {
-    width: 75.4rem;
-    height: 75.4rem;
+    width: 50rem;    
+    height: 50rem;
+    @media only screen and (min-width: $breakpoint-med) {
+      width: 65rem;
+      height: 65rem;
+    }
+    
+    @media only screen and (min-width: $breakpoint-large) {
+      width: 60rem;
+      height: 60rem;
+    }
+    
+    @media only screen and (min-width: $breakpoint-big) {
+      width: 75.4rem;
+      height: 75.4rem;
+    }
+
+    &-container{
+      @media only screen and (min-width: $breakpoint-med) {
+        margin: 0 auto;
+      }
+      @media only screen and (min-width: $breakpoint-large) {
+        margin: 0;
+      }
+    }
   }
 }
