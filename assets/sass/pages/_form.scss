@@ -37,6 +37,7 @@ form {
     margin: 0 auto;
     display: block;
     @media only screen and (min-width: $breakpoint-med) {
+      font-size: 1.4rem;
       width: auto;
       margin: 0;
       padding: 1.1rem 3rem;
