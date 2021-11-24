@@ -29,19 +29,20 @@
   
   &-subtitle {
     line-height: 1;
+    color: $secondary;
   }
 
   &-image {
     height: 15rem;
     object-fit: contain;
     @media only screen and (min-width: $breakpoint-med) {
-      height: 8rem;
+      height: 9rem;
     }
   }
 
   &-header {
     display: flex;
-    align-items: flex-end;
+    align-items: center;
 
     span {
       margin-left: 1rem;
