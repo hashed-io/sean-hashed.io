@@ -52,6 +52,7 @@ label, input, textarea {
 input {
   border: 0;
   border-bottom: 1px solid $white;
+  border-radius: 0;
 
   &:hover {
     outline: none;
