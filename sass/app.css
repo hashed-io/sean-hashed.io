@@ -348,16 +348,17 @@ img {
   .card-title {
     line-height: 1.15; }
   .card-subtitle {
-    line-height: 1; }
+    line-height: 1;
+    color: #08183c; }
   .card-image {
     height: 15rem;
     object-fit: contain; }
     @media only screen and (min-width: 45em) {
       .card-image {
-        height: 8rem; } }
+        height: 9rem; } }
   .card-header {
     display: flex;
-    align-items: flex-end; }
+    align-items: center; }
     .card-header span {
       margin-left: 1rem; }
   .card-body {
