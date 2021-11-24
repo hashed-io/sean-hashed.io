@@ -1,7 +1,9 @@
+{{ $logoRes := resources.Get "logo/Hashed_Logo.png" }}
+{{ $logo := $logoRes.Resize "250x90" }}
 <footer class="container">
   <div class="footer" >
     <a class="logo" href="{{ .Site.BaseURL }}">
-      <img height="100" width="250" src="{{ "logo/Hashed_Logo.png" | absURL }}" alt="Hashed Logo">
+      <img src="{{ $logo.RelPermalink }}" width="{{ $logo.Width }}" height="{{ $logo.Height }}" alt="Hashed Logo">
     </a>
     <div class="footer-links">
         <ul class="footer-links-social">
