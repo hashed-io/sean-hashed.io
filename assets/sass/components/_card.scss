@@ -15,10 +15,23 @@
   &-title {
     line-height: 1.15;
   }
+  
+  &-subtitle {
+    line-height: 1;
+  }
 
   &-image {
     height: 8rem;
     object-fit: contain;
+  }
+
+  &-header {
+    display: flex;
+    align-items: flex-end;
+
+    span {
+      margin-left: 1rem;
+    }
   }
 
   &-body {

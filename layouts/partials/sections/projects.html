@@ -18,8 +18,13 @@
     <div class="projects-list" id="projects-list">
       {{ range $pages }}
         <div class="card">
-          {{- $image := resources.Get .Params.Image -}}
-          <img height="60" width="auto" class="card-image" src="{{ .Params.Image }}" alt="{{ .Params.Alt }}">
+          <div class="card-header">
+            {{- $image := resources.Get .Params.Image -}}
+            <img height="60" width="auto" class="card-image" src="{{ .Params.Image | absURL }}" alt="{{ .Params.Alt }}">
+            {{ if .Params.Company }}
+            <span class="text-primary h4 card-subtitle">{{.Params.Company}}</span>
+            {{ end }}
+          </div>
           <h3 class="text-primary card-title">{{ .Title }}</h3>
           <p class="card-body mt-lg">{{ .Params.Description }}</p>
           <!-- <a class="btn btn-secondary" href="{{ .Permalink }}">Read case study</a> -->
