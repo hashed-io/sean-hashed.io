@@ -8,7 +8,10 @@
   border: none;
   text-transform: uppercase;
   font-weight: 500;
-  font-size: 1.4rem;
+  font-size: 3rem;
+  @media only screen and (min-width: $breakpoint-med) {
+    font-size: 1.4rem;
+  }
 
   &:hover {
     background-color: $primary;
