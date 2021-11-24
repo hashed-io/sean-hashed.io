@@ -557,6 +557,9 @@ img {
   gap: 10rem 0; }
   @media only screen and (min-width: 60em) {
     .stack-list {
+      grid-template-columns: repeat(5, 1fr); } }
+  @media only screen and (min-width: 77.5em) {
+    .stack-list {
       display: flex;
       align-items: center;
       flex-direction: row;
@@ -567,9 +570,6 @@ img {
   .stack-list > img {
     width: 9rem;
     height: 9rem; }
-    @media only screen and (min-width: 60em) {
-      .stack-list > img:not(:first-child) {
-        margin-left: 10rem; } }
     @media only screen and (min-width: 77.5em) {
       .stack-list > img:not(:first-child) {
         margin-top: 1rem;
@@ -608,7 +608,7 @@ img {
   #ethereum {
     transform: scale(1.5); }
   #wax {
-    margin-left: 20rem; }
+    margin-left: 10rem; }
   #kusama {
     transform: scale(2.2); }
   #polkadot {
@@ -622,6 +622,8 @@ img {
 
 @media only screen and (min-width: 77.5em) {
   #solana {
+    margin-left: 20rem; }
+  #wax {
     margin-left: 20rem; } }
 
 .areas-info {
@@ -641,6 +643,9 @@ img {
     .areas-list {
       grid-template-columns: repeat(2, 1fr); } }
   @media only screen and (min-width: 60em) {
+    .areas-list {
+      grid-template-columns: repeat(3, 1fr); } }
+  @media only screen and (min-width: 77.5em) {
     .areas-list {
       grid-template-columns: repeat(5, 1fr);
       gap: 16rem 18rem; } }
