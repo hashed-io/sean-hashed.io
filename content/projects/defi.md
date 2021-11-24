@@ -1,6 +1,7 @@
 ---
 title: "Defi"
-description: "Decentralized alternative to Kickstarter that leverages 0-risk yields for project funding."
+company: "BennyFi"
+description: "Premium Bond mechanics that leverage crypto yields to incentivize high return savings that don’t risk the principal."
 category: "Industry"
 weight: 3
 image: "project/bennyfi.jpg"

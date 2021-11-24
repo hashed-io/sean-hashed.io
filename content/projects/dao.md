@@ -1,9 +1,10 @@
 ---
 title: "Dao"
-description: "Multi-tenant DAO with the most comprehensive governance tools in the market and financial tooling for payments."
+company: "Hypa"
+description: "Multi-tenant DAO platform with support for flexible governance models, double-entry accounting classifications and reports. Compliant with Wyoming DAO LLC Act, DAO-to-DAO agreements, payroll, treasury, and more."
 category: "Industry"
 weight: 2
 image: "project/hypha-mark.png"
-alt: "Hypa Logo"
+alt: "Hypa"
 draft: false
 ---

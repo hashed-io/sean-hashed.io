@@ -1,6 +1,6 @@
 ---
-title: "Top 10 world bank"
-description: "Designed and built blockchain infrastructure for the transfer of tokenized assets across world class banking Institutions."
+title: "Enterprise Solutions"
+description: "Designed and built blockchain workflows and infrastructure for managing digital assets that will be traded between world-class financial institutions."
 category: "Industry"
 weight: 1
 image: "project/Credit-Suisse-Logo.png"
