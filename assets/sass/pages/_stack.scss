@@ -6,15 +6,22 @@
     justify-items: center;
     gap: 10rem 0;
     
-    @media only screen and (min-width: $breakpoint-med) {
+    @media only screen and (min-width: $breakpoint-large) {
       display: flex;
       align-items: center;
       flex-direction: row;
+      flex-wrap: wrap;
+    }
+    @media only screen and (min-width: $breakpoint-big) {
+      flex-wrap: nowrap;
     }
 
     & > img {
-      &:not(:first-child) {
-        @media only screen and (min-width: $breakpoint-med) {
+      &:not(:first-child) { 
+        @media only screen and (min-width: $breakpoint-large) {
+          margin-left: 10rem;
+        }
+        @media only screen and (min-width: $breakpoint-big) {
           margin-top: 1rem;
           margin-left: 12rem;
         }
@@ -58,7 +65,12 @@
 }
 
 #solana {
+  margin-left: 5rem;
   transform: scale(3.5);
+  @media only screen and (min-width: $breakpoint-small) {
+    margin-left: 0;
+  }
+
 }
 
 @media only screen and (min-width: $breakpoint-large) {
@@ -87,7 +99,12 @@
   }
 
   #solana {
-    margin-left: 20rem;
     transform: scale(3.5);
+  }
+}
+
+@media only screen and (min-width: $breakpoint-big) {
+  #solana {
+    margin-left: 20rem;
   }
 }

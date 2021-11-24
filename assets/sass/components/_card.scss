@@ -3,13 +3,24 @@
   color: $secondary;
   border-radius: 5px;
   padding: 3rem 2.3rem;
-  margin-left: 3rem;
-  min-width: 28.4rem;
-  max-width: 28.4rem;
-  min-height: 40rem;
+  margin-bottom: 5rem;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 70rem;
+  
+  @media only screen and (min-width: $breakpoint-med) {
+    min-width: 28.4rem;
+    max-width: 28.4rem;
+    min-height: 40rem;
+    margin: 0;
+    margin-left: 3rem;
+    margin-bottom: 0;
+  }
 
   &:first-child {
-    margin-left: 0;
+    @media only screen and (min-width: $breakpoint-med) {
+      margin-left: 0;
+    }
   }
 
   &-title {
@@ -21,8 +32,11 @@
   }
 
   &-image {
-    height: 8rem;
+    height: 15rem;
     object-fit: contain;
+    @media only screen and (min-width: $breakpoint-med) {
+      height: 8rem;
+    }
   }
 
   &-header {
@@ -35,7 +49,10 @@
   }
 
   &-body {
-    height: 11.3rem;
+    height: 33rem;
+    @media only screen and (min-width: $breakpoint-med) {
+      height: 11.3rem;
+    }
   }
 
   & .category {

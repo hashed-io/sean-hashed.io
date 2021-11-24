@@ -20,11 +20,13 @@
   }
 
   &-list {
-    display: flex;
-    justify-content: start;
-    margin: auto;
-    overflow-x: scroll;
-    scroll-behavior: smooth; 
+    @media only screen and (min-width: $breakpoint-med) {
+      display: flex;
+      justify-content: start;
+      margin: auto;
+      overflow-x: scroll;
+      scroll-behavior: smooth; 
+    }
 
     &::-webkit-scrollbar {
       display: none;
