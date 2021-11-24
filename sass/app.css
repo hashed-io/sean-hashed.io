@@ -79,12 +79,15 @@ body {
   filter: invert(1); }
 
 a {
-  font-size: 1.8rem;
-  letter-spacing: 0;
-  line-height: 1.8rem;
+  font-size: 3.5rem;
   color: #ffffff;
-  text-decoration: none; }
-
+  text-decoration: none;
+  font-weight: 100; }
+  @media only screen and (min-width: 45em) {
+    a {
+      font-size: 1.8rem;
+      letter-spacing: 0;
+      line-height: 1.8rem; } }
 .link:hover {
   color: #32e4b6; }
 
@@ -105,78 +108,71 @@ a {
 .arrow-left {
   transform: rotate(90deg); }
 
-h1 {
-  font-size: 14rem;
+.hiden {
+  visibility: hidden; }
+  @media only screen and (min-width: 45em) {
+    .hiden {
+      visibility: visible; } }
+h1, .h1 {
+  font-size: 20rem;
   letter-spacing: 2.8px;
   line-height: 11.2rem; }
-
-h2 {
-  font-size: 10rem;
+  @media only screen and (min-width: 45em) {
+    h1, .h1 {
+      font-size: 14rem; } }
+h2, .h2 {
+  font-size: 14rem;
   letter-spacing: 2px;
-  line-height: 8.8rem; }
-
-h3 {
-  font-size: 4.8rem;
+  line-height: normal; }
+  @media only screen and (min-width: 45em) {
+    h2, .h2 {
+      font-size: 10rem;
+      line-height: 8.8rem; } }
+h3, .h3 {
+  font-size: 8rem;
   letter-spacing: .96px;
   line-height: 8.8rem; }
-
-h4 {
-  font-size: 2.8rem;
+  @media only screen and (min-width: 45em) {
+    h3, .h3 {
+      font-size: 4.8rem; } }
+h4, .h4 {
+  font-size: 5rem;
   letter-spacing: .96px;
   line-height: 8.8rem; }
-
-h5 {
-  font-size: 1.8rem;
+  @media only screen and (min-width: 45em) {
+    h4, .h4 {
+      font-size: 2.8rem; } }
+h5, .h5 {
+  font-size: 2.5rem; }
+  @media only screen and (min-width: 45em) {
+    h5, .h5 {
+      font-size: 1.8rem;
+      line-height: 8.8rem;
+      letter-spacing: .96px; } }
+h6, .h6 {
+  font-size: 2.2rem;
   letter-spacing: .96px;
   line-height: 8.8rem; }
-
-h6 {
-  font-size: .8rem;
-  letter-spacing: .96px;
-  line-height: 8.8rem; }
-
+  @media only screen and (min-width: 45em) {
+    h6, .h6 {
+      font-size: .8rem; } }
 h1, h2, h3, h4, h5, h6 {
   font-family: "Manuka", Helvetica, sans-serif;
   text-transform: uppercase;
   font-weight: 400;
   margin: 0; }
 
-.h1 {
-  font-size: 14rem;
-  letter-spacing: 2.8px;
-  line-height: 11.2rem; }
-
-.h2 {
-  font-size: 10rem;
-  letter-spacing: 2px;
-  line-height: 8.8rem; }
-
-.h3 {
-  font-size: 4.8rem;
-  letter-spacing: .96px;
-  line-height: 8.8rem; }
-
-.h4 {
-  font-size: 2.8rem;
-  letter-spacing: .96px;
-  line-height: 8.8rem; }
-
-.h5 {
-  font-size: 1.8rem;
-  letter-spacing: .96px;
-  line-height: 8.8rem; }
-
-.h6 {
-  font-size: .8rem;
-  letter-spacing: .96px;
-  line-height: 8.8rem; }
-
 p {
-  font-size: 1.8rem;
-  line-height: 2.4rem;
-  letter-spacing: -0.18px;
+  font-size: 3.5rem;
+  line-height: normal;
+  letter-spacing: 1px;
+  font-weight: 100;
   margin: 0; }
-
+  @media only screen and (min-width: 45em) {
+    p {
+      font-size: 1.8rem;
+      line-height: 2.4rem;
+      letter-spacing: -0.18px; } }
 .left {
   text-align: left; }
 
@@ -263,13 +259,14 @@ p {
     list-style: none;
     justify-content: space-between;
     padding: 0;
-    width: 54rem;
     margin-top: 5rem; }
     @media only screen and (min-width: 45em) {
       .header-links {
-        margin-top: 0; } }
-    .header-links li:not(:last-child) {
-      margin-right: 8rem; }
+        margin-top: 0;
+        width: 54rem; } }
+    @media only screen and (min-width: 45em) {
+      .header-links li:not(:last-child) {
+        margin-right: 8rem; } }
     .header-links a {
       text-decoration: none;
       color: #ffffff; }
@@ -301,7 +298,10 @@ img {
   border: none;
   text-transform: uppercase;
   font-weight: 500;
-  font-size: 1.4rem; }
+  font-size: 3rem; }
+  @media only screen and (min-width: 45em) {
+    .btn {
+      font-size: 1.4rem; } }
   .btn:hover {
     background-color: #32e4b6; }
   .btn-circle, .btn-circle-sm {
@@ -316,6 +316,11 @@ img {
   .btn-circle-sm {
     height: 3.4rem;
     width: 3.4rem; }
+  .btn-circle-hiden {
+    display: none; }
+    @media only screen and (min-width: 45em) {
+      .btn-circle-hiden {
+        display: flex; } }
   .btn-secondary {
     background-color: #08183c;
     color: #ffffff; }
@@ -325,20 +330,41 @@ img {
   color: #08183c;
   border-radius: 5px;
   padding: 3rem 2.3rem;
-  margin-left: 3rem;
-  min-width: 28.4rem;
-  max-width: 28.4rem;
-  min-height: 40rem; }
-  .card:first-child {
-    margin-left: 0; }
+  margin-bottom: 5rem;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 70rem; }
+  @media only screen and (min-width: 45em) {
+    .card {
+      min-width: 28.4rem;
+      max-width: 28.4rem;
+      min-height: 40rem;
+      margin: 0;
+      margin-left: 3rem;
+      margin-bottom: 0; } }
+  @media only screen and (min-width: 45em) {
+    .card:first-child {
+      margin-left: 0; } }
   .card-title {
     line-height: 1.15; }
+  .card-subtitle {
+    line-height: 1; }
   .card-image {
-    height: 8rem;
+    height: 15rem;
     object-fit: contain; }
+    @media only screen and (min-width: 45em) {
+      .card-image {
+        height: 8rem; } }
+  .card-header {
+    display: flex;
+    align-items: flex-end; }
+    .card-header span {
+      margin-left: 1rem; }
   .card-body {
-    height: 11.3rem;
-    font-size: 1.4rem; }
+    height: 33rem; }
+    @media only screen and (min-width: 45em) {
+      .card-body {
+        height: 11.3rem; } }
   .card .category {
     color: #B1B1B1; }
 
@@ -360,8 +386,7 @@ img {
 
 .about {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center; }
+  flex-wrap: wrap; }
   @media only screen and (min-width: 60em) {
     .about {
       justify-content: space-between; } }
@@ -369,16 +394,26 @@ img {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 60rem; }
+    width: 100%; }
+    @media only screen and (min-width: 33.75em) {
+      .about-info {
+        width: 90%; } }
     @media only screen and (min-width: 45em) {
       .about-info {
         margin-top: 2rem;
-        margin-right: 9rem; } }
+        margin-right: 9rem;
+        width: 60%; } }
+    @media only screen and (min-width: 60em) {
+      .about-info {
+        width: 60rem; } }
     .about-info > img {
-      margin-top: 19.5rem;
+      margin-top: 3rem;
       height: 6rem;
       width: 3rem; }
-    @media only screen and (min-width: 45em) {
+      @media only screen and (min-width: 60em) {
+        .about-info > img {
+          margin-top: 19.5rem; } }
+    @media only screen and (min-width: 60em) {
       .about-info p {
         width: 50rem; } }
   .about-img {
@@ -387,8 +422,12 @@ img {
       .about-img {
         max-width: 98rem; } }
     .about-img-container {
-      width: 45%; }
+      width: 60%;
+      margin: 0 auto; }
       @media only screen and (min-width: 45em) {
+        .about-img-container {
+          width: 45%; } }
+      @media only screen and (min-width: 60em) {
         .about-img-container {
           width: auto; } }
   @media only screen and (min-width: 60em) {
@@ -435,7 +474,6 @@ img {
 
 .liquidity {
   border-radius: 10px;
-  border: 1px solid #ffffff;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -443,18 +481,48 @@ img {
   @media only screen and (min-width: 45em) {
     .liquidity {
       max-height: 67rem;
-      flex-direction: row; } }
-  @media only screen and (min-width: 45em) {
-    .liquidity-info {
-      width: 66.3rem;
-      padding-left: 6.3rem;
-      padding-right: 10.1rem; } }
-  .liquidity-info p {
-    padding: 5rem 0; }
+      flex-direction: row;
+      border: 1px solid #ffffff; } }
+  .liquidity-info {
+    padding: 2rem; }
+    @media only screen and (min-width: 45em) {
+      .liquidity-info {
+        width: 60%;
+        padding-left: 6.3rem; } }
+    @media only screen and (min-width: 60em) {
+      .liquidity-info {
+        padding-left: 2rem; } }
+    @media only screen and (min-width: 77.5em) {
+      .liquidity-info {
+        width: 66.3rem;
+        padding-right: 10.1rem;
+        padding-left: 6.3rem; } }
+    .liquidity-info p {
+      padding: 2rem 0; }
+      @media only screen and (min-width: 77.5em) {
+        .liquidity-info p {
+          padding: 5rem 0; } }
   .liquidity-img {
-    width: 75.4rem;
-    height: 75.4rem; }
-
+    width: 50rem;
+    height: 50rem; }
+    @media only screen and (min-width: 45em) {
+      .liquidity-img {
+        width: 65rem;
+        height: 65rem; } }
+    @media only screen and (min-width: 60em) {
+      .liquidity-img {
+        width: 60rem;
+        height: 60rem; } }
+    @media only screen and (min-width: 77.5em) {
+      .liquidity-img {
+        width: 75.4rem;
+        height: 75.4rem; } }
+    @media only screen and (min-width: 45em) {
+      .liquidity-img-container {
+        margin: 0 auto; } }
+    @media only screen and (min-width: 60em) {
+      .liquidity-img-container {
+        margin: 0; } }
 .projects {
   overflow: hidden; }
   .projects-header {
@@ -469,36 +537,74 @@ img {
     .projects-actions img {
       width: 2.4rem;
       height: 2.4rem; }
-  .projects-list {
-    display: flex;
-    justify-content: start;
-    margin: auto;
-    overflow-x: scroll;
-    scroll-behavior: smooth; }
-    .projects-list::-webkit-scrollbar {
-      display: none; }
+  @media only screen and (min-width: 45em) {
+    .projects-list {
+      display: flex;
+      justify-content: start;
+      margin: auto;
+      overflow-x: scroll;
+      scroll-behavior: smooth; } }
+  .projects-list::-webkit-scrollbar {
+    display: none; }
   .projects-item {
     width: 10rem; }
 
 .stack-list {
   width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center; }
-  @media only screen and (min-width: 45em) {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-items: center;
+  gap: 10rem 0; }
+  @media only screen and (min-width: 60em) {
     .stack-list {
-      flex-direction: row; } }
+      display: flex;
+      align-items: center;
+      flex-direction: row;
+      flex-wrap: wrap; } }
+  @media only screen and (min-width: 77.5em) {
+    .stack-list {
+      flex-wrap: nowrap; } }
   .stack-list > img {
-    margin-top: 1rem;
     width: 9rem;
     height: 9rem; }
-    @media only screen and (min-width: 45em) {
+    @media only screen and (min-width: 60em) {
       .stack-list > img:not(:first-child) {
+        margin-left: 10rem; } }
+    @media only screen and (min-width: 77.5em) {
+      .stack-list > img:not(:first-child) {
+        margin-top: 1rem;
         margin-left: 12rem; } }
 .stack-title {
   margin-bottom: 9.6rem; }
 
-@media only screen and (min-width: 45em) {
+#ethereum {
+  transform: scale(2); }
+
+#wax {
+  transform: scale(1.5); }
+
+#kusama {
+  transform: scale(3); }
+
+#polkadot {
+  transform: scale(1.5); }
+
+#telos {
+  transform: scale(2.5); }
+
+#eos {
+  transform: scale(1.5); }
+
+#flow {
+  transform: scale(1.5); }
+
+#solana {
+  margin-left: 5rem;
+  transform: scale(3.5); }
+  @media only screen and (min-width: 33.75em) {
+    #solana {
+      margin-left: 0; } }
+@media only screen and (min-width: 60em) {
   #ethereum {
     transform: scale(1.5); }
   #wax {
@@ -512,8 +618,11 @@ img {
   #eos {
     transform: scale(0.95); }
   #solana {
-    margin-left: 20rem;
     transform: scale(3.5); } }
+
+@media only screen and (min-width: 77.5em) {
+  #solana {
+    margin-left: 20rem; } }
 
 .areas-info {
   margin-bottom: 13rem; }
@@ -578,8 +687,17 @@ form {
       flex-direction: row;
       width: 45%; } }
   form .btn {
-    width: auto; }
-
+    justify-self: center;
+    width: 40rem;
+    padding: 1.5rem;
+    margin: 0 auto;
+    display: block; }
+    @media only screen and (min-width: 45em) {
+      form .btn {
+        width: auto;
+        margin: 0;
+        padding: 1.1rem 3rem;
+        display: inline-block; } }
 label {
   color: #ffffff; }
   label:first-child {
@@ -589,11 +707,14 @@ label {
 
 label, input, textarea {
   display: block;
-  font-size: 2.2rem; }
-
+  font-size: 3rem; }
+  @media only screen and (min-width: 60em) {
+    label, input, textarea {
+      font-size: 2.2rem; } }
 input {
   border: 0;
-  border-bottom: 1px solid #ffffff; }
+  border-bottom: 1px solid #ffffff;
+  border-radius: 0; }
   input:hover {
     outline: none; }
   input:focus-visible {
