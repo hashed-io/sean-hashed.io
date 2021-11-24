@@ -4,6 +4,7 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     justify-items: center;
+    // margin-left: 10rem;
     gap: 10rem 0;
     
     @media only screen and (min-width: $breakpoint-large) {
