@@ -28,6 +28,11 @@
     margin-bottom: 9.6rem;
   }
 }
+
+#solana {
+  transform: scale(1.8);
+}
+
 @media only screen and (min-width: $breakpoint-large) {
   #ethereum {
     transform: scale(1.5);
