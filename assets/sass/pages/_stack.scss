@@ -4,7 +4,7 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     justify-items: center;
-    gap: 5rem 0;
+    gap: 10rem 0;
     
     @media only screen and (min-width: $breakpoint-med) {
       display: flex;
@@ -29,8 +29,36 @@
   }
 }
 
+#ethereum {
+  transform: scale(2);
+}
+
+#wax {
+  transform: scale(1.5);
+}
+
+#kusama {
+  transform: scale(3);
+}
+
+#polkadot {
+  transform: scale(1.5);
+}
+
+#telos {
+  transform: scale(2.5);
+}
+
+#eos {
+  transform: scale(1.5);
+}
+
+#flow {
+  transform: scale(1.5);
+}
+
 #solana {
-  transform: scale(1.8);
+  transform: scale(3.5);
 }
 
 @media only screen and (min-width: $breakpoint-large) {
