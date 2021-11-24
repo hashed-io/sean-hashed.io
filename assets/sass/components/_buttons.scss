@@ -31,6 +31,13 @@
     height: 3.4rem;
     width: 3.4rem;
   }
+
+  &-circle-hiden {
+    display: none;
+    @media only screen and (min-width: $breakpoint-med) {
+      display: flex;
+    }
+  }
   
   &-secondary {
     background-color: $secondary;
