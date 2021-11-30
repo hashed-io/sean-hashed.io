@@ -1,19 +1,20 @@
 h1,.h1 {
   font-size: 20rem;
-  letter-spacing: 2.8px;
-  line-height: 11.2rem;
+  line-height: 20rem;
   @media only screen and (min-width: $breakpoint-med) {
     font-size: 14rem;
+    line-height: 11.2rem;
+    letter-spacing: 2.8px;
   }
 }
 
 h2,.h2{
   font-size: 14rem;
-  letter-spacing: 2px;
   line-height: normal;
   @media only screen and (min-width: $breakpoint-med) {
     font-size: 10rem;
     line-height: 8.8rem;
+    letter-spacing: 2px;
   }
 }
 
@@ -61,13 +62,18 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 p {
-  font-size: 3.5rem;
-  line-height: normal;
-  letter-spacing: 1px;
+  font-size: 4rem;
+  line-height: 5rem;
+  letter-spacing: -0.18px;
   font-weight: 100;
   margin: 0;
-
+  
   @media only screen and (min-width: $breakpoint-med) {
+    font-size: 2.2rem;
+    line-height: 3rem;
+  }
+
+  @media only screen and (min-width: $breakpoint-big) {
     font-size: 1.8rem;
     line-height: 2.4rem;
     letter-spacing: -0.18px;
