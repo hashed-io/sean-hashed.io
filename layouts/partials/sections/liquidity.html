@@ -1,3 +1,5 @@
+{{ $img := resources.Get "images/liquid.jpg" }}
+{{ $imgResize := $img.Resize "800x800" }}
 <section class="container">
   <div class="liquidity">
     <div class="liquidity-info">
@@ -8,7 +10,7 @@
       <a class="btn hiden mt-lg" href="#">View all products</a>
     </div>
     <div class="liquidity-img-container">
-      <img class="liquidity-img rounded" height="800" width="800" src="images/liquid-halftone-1.jpg" alt="liquid halftone">
+      <img class="liquidity-img rounded" height="{{ $imgResize.Height }}"  width="{{ $imgResize.Width }}" src="{{ $imgResize.RelPermalink }}" alt="liquid halftone">
     </div>
   </div>
 </section>
