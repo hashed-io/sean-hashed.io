@@ -1,0 +1,141 @@
+.navigation {
+  @media only screen and (min-width: $breakpoint-large) {
+    display: none;
+  }
+
+  &-checkbox {
+    display: none;
+  }
+  
+  &-button {
+    height: 9rem;
+    width: 9rem;
+    position: relative;
+    z-index: 6;
+    cursor: pointer;
+    margin: 0 !important;
+  }
+
+  &-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    &, &::before, &::after {
+      display: inline-block;
+      width: 2rem;
+      height: 2rem;
+      @media only screen and (min-width: $breakpoint-med) {
+        width: 1rem;
+        height: 1rem;
+      }
+      border-radius: 50%;
+      background-color: white;
+    }
+    
+    &::before, &::after {
+      position: absolute;
+      content: "";
+    }
+    &::before {
+      left: 2.5rem;
+      @media only screen and (min-width: $breakpoint-med) {
+        left: 1.5rem;
+      }
+    }
+
+    &::after {
+      right: 2.5rem;
+      @media only screen and (min-width: $breakpoint-med) {
+        right: 1.5rem;
+      }
+    }
+  }
+  
+  &-background {
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    opacity: 0;
+    background-color: $white; 
+    z-index: 2;
+    transition: all 0.8s cubic-bezier(0.86, 0, 0.07, 1);
+  }
+  
+  &-nav {
+    height: 100vh;
+    top: 0;
+    position: absolute;
+    right: -100%;
+    z-index: 4;
+    width: 100%;
+    transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  
+  &-list {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    list-style: none;
+    width: 100%;
+    padding-inline-start: 10rem;
+  }
+  
+  &-item {
+    margin: 1rem;
+  }
+  
+  &-link {
+    &:link,
+    &:visited {
+      display: inline-block;
+      padding: 1rem 2rem;
+      color: $secondary;
+      text-decoration: none;
+      text-transform: uppercase; 
+      background-size: 225%;
+      transition: all 0.4s; 
+    }
+
+    &::before {
+      background: $primary;
+      border-radius: 50%;
+      content: "";
+      height: 8px;
+      width: 8px;
+      opacity: 0;
+      left: -5px;
+      top: calc(50% - 6px);
+      position: absolute;
+      transition: all .25s ease;
+    } 
+
+    &:hover,
+    &:active, 
+    &-active {
+      color: $primary !important;
+      transform: translateX(1rem);
+      &::before {
+        opacity: 1;
+      } 
+    }
+  }
+  
+  &-checkbox:checked ~ &-background {
+    opacity: 1;
+    right: 0;
+  }
+  
+  &-checkbox:checked ~ * > &-icon {
+    &, &::before, &::after {
+      background-color: $secondary;
+    }
+  }
+  
+  &-checkbox:checked ~ &-nav {
+    right: 0;
+  }
+}

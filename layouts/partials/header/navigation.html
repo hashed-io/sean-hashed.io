@@ -1,0 +1,14 @@
+<div class="navigation">
+  <input type="checkbox" class="navigation-checkbox" id="navi-toggle" />
+  <label for="navi-toggle" class="navigation-button">
+    <span class="navigation-icon">&nbsp;</span>
+  </label>
+  <div class="navigation-background">&nbsp;</div>
+  <nav class="navigation-nav">
+    <ul class="navigation-list">
+      {{ range .Site.Menus.main }}
+      <li class="navigation-item"><a href="{{ .URL }}" class="navigation-link">{{ .Name | safeHTML }}</a></li>
+      {{ end -}}
+    </ul>
+  </nav>
+</div>
