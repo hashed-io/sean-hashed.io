@@ -23,6 +23,7 @@
     @media only screen and (min-width: $breakpoint-med) {
       display: flex;
       justify-content: start;
+      gap: 3rem;
       margin: auto;
       overflow-x: scroll;
       scroll-behavior: smooth; 
@@ -30,6 +31,9 @@
 
     &::-webkit-scrollbar {
       display: none;
+    }
+    & > * {
+      flex: 0 0 auto;
     }
   }
 
