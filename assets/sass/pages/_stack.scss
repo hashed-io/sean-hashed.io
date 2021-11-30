@@ -1,33 +1,30 @@
 .stack {
   &-list {
-    width: 100%;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
     justify-items: center;
-    // margin-left: 10rem;
-    gap: 10rem 0;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10rem;
     
     @media only screen and (min-width: $breakpoint-large) {
-      grid-template-columns: repeat(5, 1fr);
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10rem 5rem;
     }
     
     @media only screen and (min-width: $breakpoint-big) {
+      grid-template-columns: repeat(5, 1fr);
+      gap: 10rem;
+    } 
+    
+    @media only screen and (min-width: $breakpoint-big-2) {
       display: flex;
-      align-items: center;
-      flex-direction: row;
-      flex-wrap: wrap;
+      gap: 10rem;
     }
-    @media only screen and (min-width: $breakpoint-big) {
-      flex-wrap: nowrap;
+
+    & > {
+      flex: 0 0 auto;
     }
 
     & > img {
-      &:not(:first-child) { 
-        @media only screen and (min-width: $breakpoint-big) {
-          margin-top: 1rem;
-          margin-left: 12rem;
-        }
-      }
       width: 9rem;
       height: 9rem;
     }
@@ -67,10 +64,10 @@
 }
 
 #solana {
-  margin-left: 5rem;
+  // margin-left: 5rem;
   transform: scale(3.5);
   @media only screen and (min-width: $breakpoint-small) {
-    margin-left: 0;
+    // margin-left: 0;
   }
 
 }
@@ -81,7 +78,7 @@
   }
 
   #wax {
-    margin-left: 10rem;
+    // margin-left: 10rem;
   }
 
   #kusama {
@@ -105,12 +102,12 @@
   }
 }
 
-@media only screen and (min-width: $breakpoint-big) {
+@media only screen and (min-width: $breakpoint-big-2) {
   #solana {
-    margin-left: 20rem;
+    margin-left: 10rem;
   }
 
   #wax {
-    margin-left: 20rem;
+    margin-left: 10rem;
   }
 }
