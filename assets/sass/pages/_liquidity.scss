@@ -1,65 +1,58 @@
 .liquidity {
-  border-radius: 10px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  min-height: 67rem;
-  
-  @media only screen and (min-width: $breakpoint-med) {
-    max-height: 67rem;
-    flex-direction: row;
+  @media screen and (min-width: $breakpoint-med) {
+    border-radius: 10px;
     border: 1px solid $white;
+    height: 145rem;
+    max-height: 100rem;
+    margin-bottom: 40rem;
   }
   
-  &-info {
-    padding: 2rem;
-    @media only screen and (min-width: $breakpoint-med) {
-      width: 60%;
-      padding-left: 6.3rem;
-    }
-    
-    @media only screen and (min-width: $breakpoint-large) {
-      padding-left: 2rem;
-    }
+  @media screen and (min-width: $breakpoint-large) {
+    margin-bottom: 0;
+    height: auto;
+  }
+  @media screen and (min-width: $breakpoint-big) {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
 
-    @media only screen and (min-width: $breakpoint-big) {
-      width: 66.3rem;
-      padding-right: 10.1rem;
-      padding-left: 6.3rem;
-    }
+  &-info {
     
-    p {
-      padding: 2rem 0;
-      @media only screen and (min-width: $breakpoint-big) {
-        padding: 5rem 0;
-      }
+    @media screen and (min-width: $breakpoint-med) {
+      padding: 5rem;
+    }
+    @media screen and (min-width: $breakpoint-big) {
+      padding-block: 5.8rem;
+      width: 90%;
+    }
+    @media screen and (min-width: $breakpoint-big-2) {
+      max-width: 66.4rem;
     }
   }
 
   &-img {
-    width: 50rem;    
-    height: 50rem;
-    @media only screen and (min-width: $breakpoint-med) {
-      width: 65rem;
-      height: 65rem;
-    }
-    
-    @media only screen and (min-width: $breakpoint-large) {
-      width: 60rem;
-      height: 60rem;
-    }
-    
-    @media only screen and (min-width: $breakpoint-big) {
-      width: 75.4rem;
-      height: 75.4rem;
-    }
+    &-container {
+      margin-block: auto;
+      margin-inline: auto;
+      max-width: 75.4rem;
+      max-height: 75.4rem;
+      text-align: center;
 
-    &-container{
-      @media only screen and (min-width: $breakpoint-med) {
-        margin: 0 auto;
-      }
-      @media only screen and (min-width: $breakpoint-large) {
-        margin: 0;
+      img {
+        height: 62rem;
+        width: 62rem;
+        @media screen and (min-width: $breakpoint-med) {
+          height: 60rem;
+          width: 60rem;
+        }
+        @media screen and (min-width: $breakpoint-big) {
+          height: 75.4rem;
+          width: 75.4rem;
+        }
+        @media screen and (min-width: $breakpoint-big-2) {
+          transform: scale(1.1);
+        }
       }
     }
   }
