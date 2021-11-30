@@ -3,12 +3,8 @@
   margin: 4.5rem 0;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
-
-  @media only screen and (min-width: $breakpoint-small) {
-    flex-direction: row;
-    justify-content: space-between;
-  }
+  flex-direction: row;
+  justify-content: space-between;
   
   @media only screen and (min-width: $breakpoint-med) {
     margin: 0;
@@ -16,16 +12,14 @@
   }
 
   &-links {
-    width: 100%;
-    display: flex;
-    list-style: none;
-    justify-content: space-between;
-    padding: 0;
-    margin-top: 5rem;
+    display: none;
     
-    @media only screen and (min-width: $breakpoint-med) {
+    @media only screen and (min-width: $breakpoint-large) {
+      display: flex;
+      justify-content: space-between;
       margin-top: 0;
       width: 54rem; 
+      list-style: none;
     }
 
     li {
