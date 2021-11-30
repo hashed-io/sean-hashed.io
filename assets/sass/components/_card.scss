@@ -1,28 +1,28 @@
 .card {
   background-color: $white;  
-  color: $secondary;
   border-radius: 5px;
+  color: $secondary;
+  width: 75%;
+  min-height: 65rem;
+  margin: 0 auto;
   padding: 3rem 2.3rem;
-  margin-bottom: 5rem;
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 70rem;
-  
-  @media only screen and (min-width: $breakpoint-med) {
-    min-width: 28.4rem;
-    max-width: 28.4rem;
-    min-height: 40rem;
+  margin-bottom: 10rem;
+  max-width: 80rem;
+
+  @media screen and (min-width: $breakpoint-med) {
+    min-width: 33rem;
+    max-width: 33rem;
+    min-height: 45rem;
     margin: 0;
-    margin-left: 3rem;
     margin-bottom: 0;
   }
 
-  &:first-child {
-    @media only screen and (min-width: $breakpoint-med) {
-      margin-left: 0;
-    }
-  }
 
+  @media screen and (min-width: $breakpoint-large) {
+    margin: 0;
+    width: auto;
+  }
+  
   &-title {
     line-height: 1.15;
   }
@@ -31,15 +31,12 @@
     line-height: 1;
     color: $secondary;
   }
-
+  
   &-image {
     height: 15rem;
-    object-fit: contain;
-    @media only screen and (min-width: $breakpoint-med) {
-      height: 9rem;
-    }
+    object-fit: contain; 
   }
-
+  
   &-header {
     display: flex;
     align-items: center;
@@ -47,16 +44,5 @@
     span {
       margin-left: 1rem;
     }
-  }
-
-  &-body {
-    height: 33rem;
-    @media only screen and (min-width: $breakpoint-med) {
-      height: 11.3rem;
-    }
-  }
-
-  & .category {
-    color: #B1B1B1;
   }
 }
