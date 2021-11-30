@@ -2,16 +2,13 @@
   display: flex;
   flex-direction: column;
 
-  @media only screen and (min-width: $breakpoint-med) {
+  @media only screen and (min-width: $breakpoint-big) {
     flex-direction: row;
     justify-content: space-between;
   }
 
-  &-title {
-    @media only screen and (min-width: $breakpoint-med) {
-      width: 40%;
-    }
-    @media only screen and (min-width: $breakpoint-large) {
+  &-title { 
+    @media only screen and (min-width: $breakpoint-big) {
       width: 50%;
     }
   }
@@ -21,12 +18,10 @@
 form {
   width: 100%;
   @media only screen and (min-width: $breakpoint-med) {
-    flex-direction: row;
-    width: 60%;
+    max-width: 80%;
   }
-  @media only screen and (min-width: $breakpoint-large) {
-    flex-direction: row;
-    width: 45%;
+  @media only screen and (min-width: $breakpoint-big) {
+     width: 50%;
   }
 
   .btn {
