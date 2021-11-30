@@ -1,13 +1,6 @@
 .logo {
-  display: flex;
-  align-items: center;
-
-  .symbol {
-    width: 9rem;
-    height: 9rem;
-  }
-
-  .name {
-    padding-left: 2.2rem;
+  width: 40%;
+  @media only screen and (min-width: $breakpoint-med) {
+    width: auto;
   }
 }
