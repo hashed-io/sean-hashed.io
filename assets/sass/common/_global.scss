@@ -1,5 +1,6 @@
 html {
   font-size: 30%;
+  scroll-behavior: smooth;
   @media only screen and (min-width: $breakpoint-med) {
     font-size: 62.5%;
   }  
@@ -101,4 +102,13 @@ a {
   @media only screen and (min-width: $breakpoint-med) {
     visibility: visible;
   }
+}
+
+.overflow-hide {
+  overflow: hidden;
+}
+
+:not(frame) {
+  transition: .25s ease;
+  transition-property: background,border,color,left,margin,padding,right,opacity, transform;
 }
