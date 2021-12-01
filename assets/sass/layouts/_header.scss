@@ -14,7 +14,7 @@
   &-links {
     display: none;
     
-    @media only screen and (min-width: $breakpoint-large) {
+    @media only screen and (min-width: $breakpoint-big) {
       display: flex;
       justify-content: space-between;
       margin-top: 0;
