@@ -6,17 +6,26 @@
   @media screen and (min-width: $breakpoint-big) {
     display: flex;    
     justify-content: space-between;
-    gap: 12rem;
+    gap: 2%;
     margin-top: 0;
   }
 
+  @media screen and (min-width: $breakpoint-big-2) {
+    gap: 12rem;
+  }
+
   &-info {
+    flex: 0 0 auto;
     @media screen and (min-width: $breakpoint-big) {
       max-width: 60rem;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-content: space-between;
+    }
+
+    @media screen and (min-width: $breakpoint-big-2) {
+      max-width: 60rem;
     }
 
     & p {
@@ -45,7 +54,8 @@
       
       @media screen and (min-width: $breakpoint-big) {
         margin-inline: 0;
-        max-width: 70%;
+        max-width: 50%;
+        transform: scale(1.1);
       }
     }
   }
