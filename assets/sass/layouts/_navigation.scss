@@ -16,40 +16,49 @@
     z-index: 6;
     cursor: pointer;
     margin: 0 !important;
+    padding-right: 2rem;
   }
 
   &-icon {
-    position: absolute;
+    position: relative;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    &, &::before, &::after {
-      display: inline-block;
-      width: 2rem;
-      height: 2rem;
-      @media only screen and (min-width: $breakpoint-med) {
-        width: 1rem;
-        height: 1rem;
-      }
-      border-radius: 50%;
-      background-color: white;
-    }
-    
-    &::before, &::after {
-      position: absolute;
-      content: "";
-    }
+
+    &,
+    &::after,
     &::before {
-      left: 2.5rem;
+      width: 6rem;
       @media only screen and (min-width: $breakpoint-med) {
-        left: 1.5rem;
+        width: 4rem;
       }
+      height: 3px;
+      background-color: $white;
+      display: inline-block;
+    }
+
+    &::after,
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      transition: all 0.1s;
+    }
+
+    &::before {
+      bottom: 1.5rem;
     }
 
     &::after {
-      right: 2.5rem;
-      @media only screen and (min-width: $breakpoint-med) {
-        right: 1.5rem;
+      top: 1.5rem;
+    }
+    @media only screen and (min-width: $breakpoint-med) {
+      &::before {
+        bottom: 1rem;
+      }
+
+      &::after {
+        top: 1rem;
       }
     }
   }
@@ -96,6 +105,7 @@
     &:visited {
       display: inline-block;
       padding: 6rem 2rem;
+      margin: 3rem 0;
       color: $secondary;
       text-decoration: none;
       text-transform: uppercase; 
@@ -145,5 +155,37 @@
 
   &-checkbox:checked ~ &-nav > &-list {
     display: block;
+  }
+  
+  &-button:hover &-icon::before {
+    bottom: 1.8rem;
+  }
+
+  &-button:hover &-icon::after {
+    top: 1.8rem;
+  }
+
+  @media only screen and (min-width: $breakpoint-med) {
+    &-button:hover &-icon::before {
+      bottom: 1.2rem;
+    }
+
+    &-button:hover &-icon::after {
+      top: 1.2rem;
+    }
+  }
+
+  &-checkbox:checked + &-button &-icon {
+    background-color: transparent;
+  }
+
+  &-checkbox:checked + &-button &-icon::before {
+    bottom: 0;
+    transform: rotate(135deg);
+  }
+
+  &-checkbox:checked + &-button &-icon::after {
+    top: 0;
+    transform: rotate(-135deg);
   }
 }
