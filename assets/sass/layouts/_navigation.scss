@@ -1,4 +1,6 @@
 .navigation {
+  margin-top: auto;
+  margin-bottom: auto;
   @media only screen and (min-width: $breakpoint-large) {
     display: none;
   }
@@ -70,7 +72,7 @@
     position: absolute;
     right: -100%;
     z-index: 4;
-    width: 100%;
+    width: 0;
     transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
   }
   
@@ -82,6 +84,7 @@
     list-style: none;
     width: 100%;
     padding-inline-start: 10rem;
+    display: none;
   }
   
   &-item {
@@ -92,7 +95,7 @@
     &:link,
     &:visited {
       display: inline-block;
-      padding: 1rem 2rem;
+      padding: 6rem 2rem;
       color: $secondary;
       text-decoration: none;
       text-transform: uppercase; 
@@ -137,5 +140,10 @@
   
   &-checkbox:checked ~ &-nav {
     right: 0;
+    width: 100%;
+  }
+
+  &-checkbox:checked ~ &-nav > &-list {
+    display: block;
   }
 }
