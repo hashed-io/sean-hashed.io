@@ -5,16 +5,18 @@
   @media only screen and (min-width: $breakpoint-big) {
     flex-direction: row;
     justify-content: space-between;
+    // flex-wrap: wrap;
   }
 
   &-info {
+    flex: 0 0 auto;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: flex-start;
     width: 100%;
     @media only screen and (min-width: $breakpoint-big) {
-      width: 40%;
+      width: 50%;
     }
   }
 
@@ -36,8 +38,16 @@
     border-bottom: .1rem solid $white;
     padding-top: 3.2rem;
     
-    @media only screen and (min-width: $breakpoint-big) {
+    @media only screen and (min-width: $breakpoint-big-2) {
       width: 80.3rem;
+    }
+
+    &-title {
+      margin-right: 1rem;
+    }
+
+    .btn {
+      flex: 0 0 auto;
     }
 
     &:hover h4 {
