@@ -97,6 +97,13 @@ a {
   }
 }
 
+.hiden-ib {
+  display: none !important;
+  @media only screen and (min-width: $breakpoint-med) {
+    display: inline-block !important;
+  }
+}
+
 .hiden {
   visibility: hidden;
   @media only screen and (min-width: $breakpoint-med) {
