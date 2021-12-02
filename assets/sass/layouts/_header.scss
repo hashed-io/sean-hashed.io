@@ -5,6 +5,8 @@
   align-items: center;
   flex-direction: row;
   justify-content: space-between;
+  position: relative;
+  z-index: 1;
   
   @media only screen and (min-width: $breakpoint-med) {
     margin: 0;
@@ -16,19 +18,12 @@
     
     @media only screen and (min-width: $breakpoint-big) {
       display: flex;
-      justify-content: space-between;
+      gap: 8.2rem;
       margin-top: 0;
       width: 54rem; 
       list-style: none;
-    }
-
-    li {
-      &:not(:last-child) {
-        @media only screen and (min-width: $breakpoint-med) {
-          margin-right: 8rem;
-        }
-      }
-    }
+      justify-content: flex-end;
+    } 
 
     & a {
       text-decoration: none;
