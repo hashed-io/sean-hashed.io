@@ -73,7 +73,7 @@ p {
     line-height: 3rem;
   }
 
-  @media only screen and (min-width: $breakpoint-big) {
+  @media only screen and (min-width: $breakpoint-large) {
     font-size: 1.8rem;
     line-height: 2.4rem;
     letter-spacing: -0.18px;

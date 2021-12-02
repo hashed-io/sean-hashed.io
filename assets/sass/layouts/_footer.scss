@@ -3,7 +3,7 @@
   align-items: center;
   flex-direction: column;
   margin-bottom: 5rem;
-  @media only screen and (min-width: $breakpoint-med) {
+  @media only screen and (min-width: $breakpoint-big) {
     flex-direction: row;
     justify-content: space-between;
   }
@@ -12,13 +12,15 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    @media only screen and (min-width: $breakpoint-med) {
-      width: 50%;
+    @media only screen and (min-width: $breakpoint-big) {
       align-items: flex-end;
     }
 
     & a {
-      font-size: 1.4rem;
+      font-size: 3rem;
+      @media only screen and (min-width: $breakpoint-med) {
+        font-size: 2rem;
+      }
       text-decoration: none;
       color: $secondary;
       &:hover {
@@ -39,6 +41,11 @@
       }
       @media only screen and (min-width: $breakpoint-med) {
         justify-content: flex-end;
+      }
+
+      svg {
+        height: 40px;
+        width: 40px;
       }
     }
 

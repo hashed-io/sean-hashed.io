@@ -18,7 +18,7 @@
 form {
   width: 100%;
   @media only screen and (min-width: $breakpoint-med) {
-    max-width: 80%;
+    // max-width: 80%;
   }
   @media only screen and (min-width: $breakpoint-big) {
      width: 50%;
@@ -29,7 +29,7 @@ form {
     justify-self: center;
     width: 40rem;
     padding: 2.5rem 1.5rem;
-    margin: 0 auto;
+    margin: 0;
     display: block;
     @media only screen and (min-width: $breakpoint-med) {
       font-size: 1.4rem;

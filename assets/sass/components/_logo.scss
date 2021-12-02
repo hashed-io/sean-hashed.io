@@ -1,9 +1,8 @@
 .logo {
   width: 45%;
+  max-width: 200px;
   @media only screen and (min-width: $breakpoint-med) {
     width: 35%;
-  }
-  @media only screen and (min-width: $breakpoint-big) {
-    width: 16.5%;
+    max-width: 250px;
   }
 }
