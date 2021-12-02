@@ -1,6 +1,9 @@
 .logo {
-  width: 40%;
+  width: 45%;
   @media only screen and (min-width: $breakpoint-med) {
-    width: auto;
+    width: 35%;
+  }
+  @media only screen and (min-width: $breakpoint-big) {
+    width: 16.5%;
   }
 }
