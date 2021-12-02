@@ -540,8 +540,7 @@ img {
       z-index: 1; } }
   @media screen and (min-width: 101.25em) {
     .about {
-      gap: 15rem;
-      margin-top: 0; } }
+      gap: 15rem; } }
   .about-info {
     flex: 0 0 auto; }
     @media screen and (min-width: 70em) {
@@ -726,7 +725,7 @@ img {
   @media only screen and (min-width: 101.25em) {
     .stack-list {
       display: flex;
-      gap: 10rem; } }
+      gap: 4%; } }
   .stack-list > {
     flex: 0 0 auto; }
   .stack-list > img {
@@ -783,7 +782,9 @@ img {
   #solana {
     margin-left: 10rem; }
   #wax {
-    margin-left: 10rem; } }
+    margin-left: 10rem; }
+  #flow {
+    margin-left: 4rem; } }
 
 .areas-info {
   margin-bottom: 13rem; }
