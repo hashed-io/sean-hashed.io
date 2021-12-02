@@ -9,14 +9,12 @@
     </div>
     <div class="articles-list">
       {{ range sort $pages "Date" "asc" }}
-        <div>
-          <div class="article">
-            <div class="article-title">
-              <h3>{{ .Title }}</h3>
-              <p>{{ .Date | time.Format "Jan 2, 2006" }}</p>
-            </div>
-            <a class="btn btn-circle btn-circle-hiden arrow-right" href="{{ .Permalink }}"><img class="invert-color" width="24" height="24" src="icons/arrow.svg" alt=""><span class="sr-only">Arrow down</span></a>
+        <div class="article">
+          <div class="article-title">
+            <h3>{{ .Title }}</h3>
+            <p>{{ .Date | time.Format "Jan 2, 2006" }}</p>
           </div>
+          <a class="btn btn-circle btn-circle-hiden arrow-right" href="{{ .Permalink }}"><img class="invert-color" width="24" height="24" src="icons/arrow.svg" alt=""><span class="sr-only">Arrow down</span></a>
         </div>
       {{ end }}
     </div>

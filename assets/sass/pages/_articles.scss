@@ -38,8 +38,14 @@
     border-bottom: .1rem solid $white;
     padding-top: 3.2rem;
     
+    @media only screen and (min-width: $breakpoint-big) {
+      &:first-child {
+        padding-top: 0;
+      }
+    }
+    
     @media only screen and (min-width: $breakpoint-big-2) {
-      width: 80.3rem;
+      width: 80.3rem; 
     }
 
     &-title {
