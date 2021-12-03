@@ -21,7 +21,7 @@
     }
     @media only screen and (min-width: $breakpoint-big-2) {
       grid-template-columns: repeat(5, 1fr);
-      gap: 16rem 15rem;
+      gap: inherit;
     }
     justify-items: center;
     gap: 4rem 4.5rem;

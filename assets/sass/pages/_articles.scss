@@ -16,7 +16,7 @@
     align-items: flex-start;
     width: 100%;
     @media only screen and (min-width: $breakpoint-big) {
-      width: 50%;
+      width: auto;
     }
   }
 
