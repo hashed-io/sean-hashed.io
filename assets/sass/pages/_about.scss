@@ -44,19 +44,9 @@
   }
 
   &-img {
-    // transform:  scaleX(-1);  
-    max-width: 92%;
-
     &-container {
-      @media screen and (min-width: $breakpoint-med) {
-        margin-inline: auto;
-        max-width: 70%;
-      }
-      
-      @media screen and (min-width: $breakpoint-big) {
-        margin-inline: 0;
-        // max-width: 50%;
-        transform: scale(1.1) translateX(10%);
+      @media only screen and (min-width: $breakpoint-big-2) {
+        margin-right: -9rem;
       }
     }
   }
