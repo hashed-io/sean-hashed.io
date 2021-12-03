@@ -4,10 +4,14 @@
       <h2 class="text-primary">Get in touch with us</h2>
     </div>
     <form action="mailto:max@digitalscarcity.io" method="post">
-      <label for="email">Email*</label>
-      <input type="email" name="email" id="email" autocomplete="off">
-      <label for="message">Message*</label>
-      <textarea name="message" id="message" cols="30" rows="10"></textarea>
+      <div class="form-control">
+        <input type="email" name="email" id="email">
+        <label class="label-focus" for="email">Email*</label>
+      </div>
+      <div class="form-control">
+        <textarea name="message" id="message" cols="30" rows="10"></textarea>
+        <label class="label-focus" for="message">Message*</label>
+      </div>
       <input class="btn" type="submit" value="Send">
     </form> 
   </div>

@@ -64,6 +64,7 @@ input {
   border: 0;
   border-bottom: 1px solid $white;
   border-radius: 0;
+  margin-top: 2rem;
 
   &:hover {
     outline: none;
@@ -78,6 +79,25 @@ input, textarea {
   color: $white;
   width: 98%;
   background-color: transparent;
+  @supports (-webkit-touch-callout: none) {
+    width: 95%;
+  }
+}
+
+.form-control {
+  display: flex;
+  flex-direction: column-reverse;
+  &:first-child {
+    label {
+      margin-top: 5rem; 
+    }
+  }
+
+  input:focus, textarea:focus {
+    & + label {
+      color: $primary;
+    }
+  }
 }
 
 textarea {
