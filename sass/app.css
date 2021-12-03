@@ -564,16 +564,9 @@ img {
         .about-info > img {
           margin-top: 19rem;
           margin-bottom: 16rem; } }
-  .about-img {
-    max-width: 92%; }
-    @media screen and (min-width: 45em) {
-      .about-img-container {
-        margin-inline: auto;
-        max-width: 70%; } }
-    @media screen and (min-width: 70em) {
-      .about-img-container {
-        margin-inline: 0;
-        transform: scale(1.1) translateX(10%); } }
+  @media only screen and (min-width: 101.25em) {
+    .about-img-container {
+      margin-right: -9rem; } }
 .articles {
   display: flex;
   flex-direction: column; }
