@@ -1,5 +1,5 @@
 {{ $img := resources.Get "images/halftone.jpg" }}
-{{ $imgResize := $img.Resize "980x1133" }}
+{{ $imgResize := $img.Resize "1100x webp q75" }}
 <section class="container my-xl">
   <div class="about">
     <div class="about-info">
@@ -13,7 +13,7 @@
       <img class="selft-end text-white" height="62" width="20" src="icons/arrow.svg" alt="arrow down">
     </div>
     <div class="about-img-container">
-      <img class="about-img" src="{{ "images/halftone.jpg" | absURL}}" alt="halftone">
+      <img class="about-img" src="{{ $imgResize.RelPermalink }}" width="{{ $imgResize.Width }}" height="{{ $imgResize.Height }}" alt="halftone">
     </div>
   </div>
 </section>
