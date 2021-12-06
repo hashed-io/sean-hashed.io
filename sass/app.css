@@ -654,6 +654,12 @@ img {
 
 @media screen and (min-width: 101.25em) {
   .liquidity-info {
+    width: auto;
+    max-width: 100%; } }
+
+@media screen and (min-width: 107.25em) {
+  .liquidity-info {
+    width: auto;
     max-width: 66.4rem; } }
 
 .liquidity-img-container {
