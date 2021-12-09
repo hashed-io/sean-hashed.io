@@ -598,6 +598,9 @@ img {
         flex-direction: row;
         justify-content: space-between;
         margin-top: 0; } }
+    @media only screen and (min-width: 70em) {
+      .articles-list {
+        margin-left: 5rem; } }
   .articles .article {
     display: flex;
     justify-content: space-between;
@@ -841,9 +844,11 @@ img {
     .form {
       flex-direction: row;
       justify-content: space-between; } }
-  @media only screen and (min-width: 70em) {
-    .form-title {
-      width: 50%; } }
+  .form-title {
+    margin-right: 5rem; }
+    @media only screen and (min-width: 70em) {
+      .form-title {
+        width: 50%; } }
 form {
   width: 100%; }
   @media only screen and (min-width: 70em) {
