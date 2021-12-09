@@ -27,6 +27,9 @@
       justify-content: space-between;
       margin-top: 0;
     }
+    @media only screen and (min-width: $breakpoint-big) {
+      margin-left: 5rem;
+    }
   }
 
   .article {
